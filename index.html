@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pehta - Infocenter Bled Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background: url('https://images.unsplash.com/photo-1490604676484-39ef932c1046?q=80&w=2500&auto=format&fit=crop') no-repeat center center fixed;
+        background-size: cover;
+        margin: 0;
+        overflow: hidden;
+      }
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.2) 100%);
+        pointer-events: none;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+      }
+      .message-user {
+        background: linear-gradient(135deg, #0055a4 0%, #003d73 100%);
+      }
+      .message-pehta {
+        background: white;
+        border-left: 5px solid #00b2a9;
+      }
+      @keyframes pulse-ring {
+        0% { transform: scale(0.33); opacity: 0.8; }
+        80%, 100% { transform: scale(1.5); opacity: 0; }
+      }
+      .pulse-animation {
+        animation: pulse-ring 2.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 0, 0, 0.25);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+</head>
+  <body class="min-h-screen flex items-center justify-center p-4">
+    <div id="root" class="w-full max-w-5xl h-[95vh] flex items-center justify-center"></div>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "Infocenter Bled Voice Assistant - Pehta",
+  "description": "Meet Pehta, your AI-powered tourist guide for Bled. Real-time voice assistance in English, Slovenian, and German using Gemini 2.5 Native Audio.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
